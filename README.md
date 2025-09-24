@@ -73,3 +73,8 @@ All endpoints are protected, tenant-aware, and respect user roles.
     *   Full notes management (create, view, edit, delete).
     *   An "Upgrade to Pro" button appears when the free plan's note limit is reached.
     *   Displays the tenant's current subscription status in real-time.
+
+---
+
+## Application Backend Url
+https://saasnotesbackend.onrender.com/
