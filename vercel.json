@@ -1,11 +1,13 @@
 {
   "version": 2,
   "builds": [
-    { "src": "backend/server.js", "use": "@vercel/node" },
-    { "src": "frontend/package.json", "use": "@vercel/static-build" }
+    { "src": "Backend/api/*.js", "use": "@vercel/node" },
+    { "src": "Frontend/package.json", "use": "@vercel/static-build" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "backend/server.js" },
-    { "src": "/(.*)", "dest": "frontend/build/$1" }
+    { "src": "/api/notes", "dest": "Backend/api/notes.js" },
+    { "src": "/api/auth/(login|register)", "dest": "Backend/api/auth.js" },
+    { "src": "/api/tenant", "dest": "Backend/api/tenant.js" },
+    { "src": "/(.*)", "dest": "Frontend/build/$1" }
   ]
 }
