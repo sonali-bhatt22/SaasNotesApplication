@@ -9,7 +9,7 @@
   --danger:#ef4444;
   --warning:#f59e0b;
   --success:#10b981;
-  --border:#1f2a44;
+  --border:#3a64c4;
   --shadow:0 10px 30px rgba(0,0,0,.35);
 }
 
@@ -17,10 +17,10 @@ html,body,#root{height:100%; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sa
 body{margin:0;background:linear-gradient(180deg,#0a1020,#0e1530 60%,#0b1220);color:var(--text);font-family: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
 
 .app-shell{max-width:1000px;margin:0 auto;padding:24px}
-.topbar{display:flex;justify-content:space-between;align-items:center;margin:18px 0 24px 0;padding:16px 18px;background:rgba(18,26,43,.75);backdrop-filter: blur(6px);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow)}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin:18px 0 24px 0;padding:16px 18px;background:rgba(18,26,43,.75);backdrop-filter: blur(6px);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow); }
 .topbar h1{margin:0;font-size:22px;letter-spacing:.3px}
 
-.controls{display:flex;align-items:center;gap:10px}
+.controls{display:flex;align-items:center;gap:10px; }
 .input{padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:#0f1627;color:var(--text);outline:none;min-width:140px}
 .input::placeholder{color:#8794b0}
 
@@ -63,3 +63,21 @@ body{margin:0;background:linear-gradient(180deg,#0a1020,#0e1530 60%,#0b1220);col
 .modal-body{padding:18px}
 .modal-actions{display:flex;justify-content:flex-end;gap:10px;padding:0 18px 16px 18px}
 
+@media (max-width: 530px) {
+  .controls {
+    flex-direction: column;
+  }
+  .controls .input, .controls .btn {
+    width: 100%;
+  }
+  .topbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .form .textarea{
+    min-height: 30px;
+  }
+  .note-card{
+    
+  }
+}
